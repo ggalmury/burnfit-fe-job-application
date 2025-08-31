@@ -1,16 +1,15 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+
+import Calendar from "@/components/organisms/Calendar";
 
 const CalendarScreen = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Calendar</Text>
-    </View>
+    <SafeAreaView>
+      <View style={{ paddingHorizontal: 24 }}>
+        <Calendar />
+      </View>
+    </SafeAreaView>
   );
 };
 
