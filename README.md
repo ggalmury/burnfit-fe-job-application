@@ -1,50 +1,58 @@
-# Welcome to your Expo app 👋
+# BurnFit Frontend 과제 – React Native 캘린더
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 과제 개요
+React Native를 사용해 커스텀 캘린더 구현
 
-## Get started
+---
 
-1. Install dependencies
+## 구현 내용
 
-   ```bash
-   npm install
-   ```
+### ✅ Level 1
+- React Native 기반 앱 제작
+- 하단에 Bottom Tabs Navigator 추가
+- 홈 / 캘린더 / 라이브러리 / 마이페이지 탭 생성 및 각 탭과 연결된 스크린 추가
 
-2. Start the app
+### ✅ Level 2
+- 캘린더 탭에 외부 라이브러리 없이 커스텀 캘린더 컴포넌트 제작
+- 기능 1: 현재 월 출력, 오늘 날짜 표시
+- 기능 2: 상단 좌우 화살표 버튼 → 전월/익월 출력
+- 기능 3: 특정 날짜 선택 시 원 표시 (마지막 선택만 표시)
 
-   ```bash
-   npx expo start
-   ```
+### ❌ Level 3
+- **react-native-reanimated**, **react-native-gesture-handler** 사용
+- 제스처 이벤트 발생 시:
+  - 월 캘린더 → 주 캘린더 변환
+  - 주 캘린더 → 월 캘린더 변환
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 사용 라이브러리
+- Zustand
+- date-fns
+- react-native-reanimated
+- react-native-gesture-handler
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
-
-When you're ready, run:
-
+### 의존성 설치
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 실행 방법
+```bash
+# 앱 실행
+npm run start
 
-To learn more about developing your project with Expo, look at the following resources:
+# 안드로이드 에뮬레이터 실행
+npm run android
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+# iOS 시뮬레이터 실행
+npm run ios
 
-## Join the community
+# 웹 실행
+npm run web
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
